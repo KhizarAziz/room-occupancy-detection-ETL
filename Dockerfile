@@ -9,7 +9,8 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # Copy the application files
 COPY ./app /code/app
 COPY ./services /code/services
-COPY ./models /code/models
+COPY ./ml_models /code/ml_models
+COPY ./data_models /code/data_models
 COPY ./utils /code/utils
 COPY ./config /code/config
 # Include tests if needed in the Docker image
