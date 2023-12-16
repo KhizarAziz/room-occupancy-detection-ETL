@@ -88,9 +88,9 @@ jobs:
     - name: Docker build and restart
       run: |
         ssh -i ~/.ssh/id_rsa ${{ secrets.USERNAME }}@${{ secrets.HOST }} '
-        sudo docker stop ${{ env.CONTAINER_NAME }} || true
-        sudo docker rm ${{ env.CONTAINER_NAME }}  || true
-        sudo docker rmi ${{ env.IMAGE_NAME }} || true
-        cd ${{ WORKING_DIR }}
-        sudo docker build -t ${{ env.IMAGE_NAME }} .
-        sudo docker run -it --name ${{ env.CONTAINER_NAME }} -d ${{ env.IMAGE_NAME }}'
+#        sudo docker stop ${{ env.CONTAINER_NAME }} || true
+#        sudo docker rm ${{ env.CONTAINER_NAME }}  || true
+#        sudo docker rmi ${{ env.IMAGE_NAME }} || true
+#        cd ${{ WORKING_DIR }}
+#        sudo docker build -t ${{ env.IMAGE_NAME }} .
+#        sudo docker run -it --name ${{ env.CONTAINER_NAME }} -d ${{ env.IMAGE_NAME }}'
