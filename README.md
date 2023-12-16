@@ -14,13 +14,13 @@ cd room-occupancy-detection-service
 
 Build the Docker image using the following command:
 ```bash
-docker build -t occup-img .
+docker build -t occupancy-docker-image .
 ```
 
 Run the Docker container with:
 
 ```bash
-docker run -d -p 5000:5000 occup-container
+docker run -d -p 5000:5000 occupancy-container
 ```
 
 
