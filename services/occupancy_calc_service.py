@@ -44,9 +44,6 @@ class Occupancy_Calculation_Service:
         pca_features = apply_pca(complete_features, self.pca)
 
         # Make prediction
-        # prediction = self.model.predict(pca_features)
-
-        # Make prediction
         prediction_probabilities = self.model.predict_proba(pca_features)
 
         # Format probabilities as a dictionary
