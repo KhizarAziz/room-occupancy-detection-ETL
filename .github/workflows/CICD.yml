@@ -7,7 +7,7 @@ on: [push]
 env:
   CONTAINER_NAME: occupancy-container
   IMAGE_NAME: occupancy-docker-image
-  WORKING_DIR: /home/ec2-user/occupancy-detectorrrr
+  WORKING_DIR: /home/ec2-user/occupancy-detector
 
 # jobs to do
 jobs:
@@ -88,9 +88,9 @@ jobs:
     - name: Docker build and restart
       run: |
         ssh -i ~/.ssh/id_rsa ${{ secrets.USERNAME }}@${{ secrets.HOST }} '
-#        sudo docker stop ${{ env.CONTAINER_NAME }} || true
-#        sudo docker rm ${{ env.CONTAINER_NAME }}  || true
-#        sudo docker rmi ${{ env.IMAGE_NAME }} || true
-#        cd ${{ WORKING_DIR }}
-#        sudo docker build -t ${{ env.IMAGE_NAME }} .
-#        sudo docker run -it --name ${{ env.CONTAINER_NAME }} -d ${{ env.IMAGE_NAME }}'
+        sudo docker stop ${{ env.CONTAINER_NAME }} || true
+        sudo docker rm ${{ env.CONTAINER_NAME }}  || true
+        sudo docker rmi ${{ env.IMAGE_NAME }} || true
+        cd ${{ WORKING_DIR }}
+        sudo docker build -t ${{ env.IMAGE_NAME }} .
+        sudo docker run -it --name ${{ env.CONTAINER_NAME }} -d ${{ env.IMAGE_NAME }}'
