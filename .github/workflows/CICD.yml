@@ -93,4 +93,4 @@ jobs:
         sudo docker rmi ${{ env.IMAGE_NAME }} || true
         cd ${{ env.WORKING_DIR }}
         sudo docker build -t ${{ env.IMAGE_NAME }} .
-        sudo docker run -it -d -p 5000:5000  --name ${{ env.CONTAINER_NAME }}'
+        sudo docker run -it -d -p 5000:5000 --name ${{ env.CONTAINER_NAME }} ${{ env.IMAGE_NAME }}'
